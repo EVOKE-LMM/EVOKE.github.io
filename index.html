@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K19QDCVYV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0K19QDCVYV');
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>When Large Multimodal Models Confront Evolving Knowledge: Challenges and Pathways</title>
+  <meta name="description" content="TrustGen provides comprehensive framework and benchmarks for evaluating AI model trustworthiness across 7 dimensions: truthfulness, safety, fairness, privacy, robustness, machine ethics, and advanced AI risks.">
+  <meta name="keywords" content="AI trustworthiness, generative AI, foundation models, AI safety, AI ethics, model evaluation, AI benchmark, LLM evaluation, AI reliability, machine ethics, AI privacy, model robustness, AI fairness, AI alignment, trustworthy AI, AI risk assessment, GenFMs, AI governance, AI testing framework, AI security, responsible AI, AI transparency, AI accountability, AI compliance, AI performance metrics, AI safety standards, deep learning safety, AI model testing, ethical AI development, AI trust framework, AI validation">
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="EVOKE/img/logo.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+ 
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Crimson+Text:italic|Neuton:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600|IM+Fell+English:italic|Amethysta:regular" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:700|IM+Fell+Double+Pica:italic|Ovo:regular" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500|Raleway:600|Frank+Ruhl+Libre:300" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
+  <!-- SEO Meta Tags -->
+  <title>When Large Multimodal Models Confront Evolving Knowledge: Challenges and Pathways & Large Multimodal Models | Multimodal Evolving Knowledge Injection Benchmark</title>
+  <meta name="description" content="TrustGen provides comprehensive framework and benchmarks for evaluating AI model trustworthiness across 7 dimensions: truthfulness, safety, fairness, privacy, robustness, machine ethics, and advanced AI risks.">
+  <meta name="keywords" content="Large Multimodal Models, Multimodal Evolving Knowledge, Knowledge Injection, Dataset and Benchmark">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="When Large Multimodal Models Confront Evolving Knowledge: Challenges and Pathways">
+  <meta property="og:description" content="Comprehensive evaluation framework and dynamic benchmark system for assessing trustworthiness of generative AI models across multiple dimensions.">
+  <!-- <meta property="og:image" content="assets/img/header-logo.png"> -->
+  <meta property="og:image" content="EVOKE/img/header-logo.png">
+  <meta property="og:url" content="https://trustgen.github.io/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When Large Multimodal Models Confront Evolving Knowledge: Challenges and Pathways">
+  <meta name="twitter:description" content="Leading framework for evaluating AI model trustworthiness, safety, and reliability across 7 key dimensions.">
+  <!-- <meta name="twitter:image" content="assets/img/header-logo.png"> -->
+  <meta property="og:image" content="EVOKE/img/header-logo.png">
+
+  
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="TrustGen Research Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://trustgen.github.io/">
+  
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "TrustGen",
+    "description": "Framework and benchmark system for evaluating trustworthiness of generative AI models",
+    "url": "https://trustgen.github.io/",
+    "keywords": "AI trustworthiness, generative models, AI safety, model evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "TrustGen Research Team"
+    }
+  }
+  </script>
+
+  <!-- =======================================================
+  * Template Name: Anyar
+  * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1 class="sitename">Trust</h1> -->
+        <!-- <img src="assets/img/header-logo.png" class="img-fluid" id="logo-img"  alt=""> -->
+        <img src="EVOKE/img/header-logo.png" class="img-fluid" id="logo-img"  alt="">
+
+        
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Explore</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#about">Background</a></li>
+              <li><a href="#rules">Guideline</a></li>
+              <!-- <li><a href="#dimensions">Dimensions</a></li> -->
+              <li><a href="#models">Benchmark</a></li>
+              <li><a href="#leaderboard">Leaderboard</a></li>
+              <!-- <li><a href="#discussion">Discussion</a></li> -->
+              <li><a href="#team">Team</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#about">Background</a></li> -->
+          <!-- <li><a href="#dimensions">Dimensions</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#discussion">Discussion</a></li> -->
+          <!-- <li><a href="https://trusteval-docs.readthedocs.io/">Docs</a></li> -->
+          <li><a href="EVOKE/slides/video-When Large Multimodal Models Confront Evolving Knowledge Challenges and Pathways.pdf">Slides</a></li>
+          <li><a href="https://github.com/TrustGen/TrustEval-toolkit">Github</a></li>
+          <li><a href="https://arxiv.org/abs/2502.14296">Paper</a></li>
+          <li><a href="https://huggingface.co/datasets/kailinjiang/EVOKE">Dataset</a></li>
+
+
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+     <!-- <div class="header-social-links">
+       <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+<!--        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>-->
+<!--        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>-->
+  <!-- </div>  -->
+
+    </div>
+  </header> 
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="img-background-container"> <!-- 使用 class 而不是 id -->
+        <div class="img-background" id="background"></div>
+      </div>
+      <video autoplay muted  playsinline preload="auto"  id="background-video">
+        <!-- <source src="assets/img/background-video - 02-4.mp4" type="video/mp4"> -->
+        <source src="EVOKE/video/evoke.mp4" type="video/mp4">
+        
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="container" id="title-container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="100">
+            <h2><span>When </span>Large Multimodal Models <span>Confront Evolving Knowledge</span></h2>
+            <p>Challenges and Pathways</p>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Background</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <p style="font-family: 'Dancing Script', cursive; font-size: 1.5em; text-align: center;">
+          "The up-to-date events and entities are constantly emerging on the Internet."
+        </p>
+        <p style="text-align: right; font-family: 'Dancing Script', cursive; font-size: 1.5em;">
+          – Evolving Knowledge
+        </p>
+        <br>
+
+        <div class="text-center my-3">
+          <img src="EVOKE/img/milestone.png" class="img-fluid my-2" alt="" style="width: 100%; height: auto;">
+        </div>
+        
+        <br><br>
+        
+        <div class="text-center my-3">
+          <img src="EVOKE/img/motivation.jpg" class="img-fluid my-2" alt="" style="width: 80%; height: auto;">
+        </div>
+        
+        <div class="row gy-10 my-4">
+        <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Introduction</h2>
+
+      </div>
+
+          <p>Large language/multimodal models (LLMs/LMMs) store extensive pre-trained knowledge but struggle to maintain consistency with real-world updates, making it difficult to avoid catastrophic forgetting while acquiring evolving knowledge. Previous work focused on constructing textual knowledge datasets and exploring knowledge injection in LLMs, lacking exploration of multimodal evolving knowledge injection in LMMs. To address this, we propose the <b>EVOKE</b> benchmark to evaluate LMMs' ability to inject multimodal evolving knowledge in real-world scenarios. Meanwhile, a comprehensive evaluation of multimodal evolving knowledge injection revealed <b>two challenges</b>: <b>(1) Existing knowledge injection methods perform terribly on evolving knowledge.</b> <b>(2) Supervised fine-tuning causes catastrophic forgetting, particularly instruction following ability is severely compromised.</b> Additionally, we provide <span style="font-weight: bold; color: brown;">pathways</span> and find that: <span style="font-weight: bold; color: brown;">(1) Text knowledge augmentation during the training phase improves performance, while image augmentation cannot achieve it.</span> <span style="font-weight: bold; color: brown;">(2) Continual learning methods, especially Replay and MoELoRA, effectively mitigate forgetting.</span> Our findings indicate that current knowledge injection methods have many limitations on evolving knowledge, which motivates further research on more efficient and stable knowledge injection methods.
+          </p>
+
+          <video class="img-fluid" controls>
+            <source src="EVOKE/video/evoke-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+
+          
+      <div class="row gy-5 my-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4 icon-box position-relative">
+          <img src="EVOKE/img/compliant.png" alt="guideline icon" style="width: 15%;">
+          <h4>Contribution 1:   Evolving Knowledge Benchmark (EVOKE)</h4>
+          
+          <ul class="ps-3" style="list-style-type: disc;">
+            <li>We propose an automated pipeline for collecting evolving knowledge to construct EVOKE.</li>
+            <li>A benchmark for evaluating evolving knowledge injection in real-world scenarios.</li>
+          </ul>
+          </p>
+
+        </div><!-- Icon-Box -->
+
+        <div class="col-md-4 icon-box position-relative">
+          <img src="EVOKE/img/framework-1.png" alt="framework icon" style="width: 14%;">
+          <h4>Contribution 2: Challenges of Evolving Knowledge Injection</h4>
+          <ul class="ps-3" style="list-style-type: disc;">
+            <li>Extensive experiments have been conducted on evolving knowledge injection, revealing two challenges.</li>
+            <li>Terrible performance of existing knowledge injection methods and catastrophic forgetting caused by supervised fine-tuning.</li>
+        </ul>
+        </div><!-- Icon-Box -->
+
+        <div class="col-md-4 icon-box position-relative">
+          <img src="EVOKE/img/research.png" alt="analysis icon" style="width: 14%;">
+          <h4>Contribution 3: Pathways of Evolving Knowledge Injection</h4>
+          <ul class="ps-3" style="list-style-type: disc;">
+            <li>We provide the pathways and demonstrate that text knowledge augmentation during the training phase improves performance.</li>
+            <li>And continual learning methods effectively mitigate forgetting.</li>
+        </ul>
+
+        </div><!-- Icon-Box -->
+      </div>
+    <!-- </section> -->
+
+
+
+    <section id="models" class="models section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h2>Dynamic Benchmark</h2> -->
+        <h2><b>EVO</b>lving <b>K</b>nowledg<b>E</b> Benchmark </h2>
+
+      </div><!-- End Section Title -->
+      <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="col-11">
+          <p>The EVOKE benchmark comprises </span> <span style="font-weight: bold; color: brown;">9,422</span> knowledge-image pairs for LMM knowledge injection, spanning 159 fine-grained types (29 New types and 130 Entity types).</p>
+
+          <div class="text-center my-3">
+            <img src="EVOKE/img/data_display.png" class="img-fluid my-2" alt="" style="width: 100%; height: auto;">
+          </div>
+        
+          <br><br> 
+
+          <p>Overall pipeline of the construction for EVOKE benchmark. </span> <span style="font-weight: bold; color: brown;">(a) Firstly</span>, collect original data from CNN and Wikipedia, and filter popular data. </span> <span style="font-weight: bold; color: brown;">(b) Secondly</span>, we use GPT-4o to summarize the textual content of the original data. </span> <span style="font-weight: bold; color: brown;">(c) Subsequently</span>, QA pairs are generated by GPT-4o and query images are downloaded from Google. </span> <span style="font-weight: bold; color: brown;">(d) Lastly</span>, we manually review the original knowledge image and query image. The source of heuristic query: we manually write multiple templates and randomly select one template for each piece of data.</p>
+          
+          <div class="text-center my-3">
+            <img src="EVOKE/img/data_construction.png" class="img-fluid my-2" alt="" style="width: 100%; height: auto;">
+          </div>
+        </div>
+
+        
+
+    </section>
+        
+
+
+
+
+<!-- Rules Section -->
+
+
+    <section id="rules" class="rules section">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>LMM's previous capability evaluation benchmarks</h2>
+            </div>
+            <p class="rules-intro">
+              To systematically evaluate the side effect of knowledge injection on the general capabilities of LMMs, we conduct comprehensive assessments using 12 benchmark datasets spanning 7 distinct capability dimensions:
+            </p>
+            <ul class="list-unstyled">
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Comprehensive Evaluation</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Optical Character Recognition</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Multidisciplinary</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Instruction Following</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Multi-Round QA</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Mathematical Reasoning</li>
+              <li style="margin-top: 10pt; margin-bottom: 10pt;"><i class="bi bi-check-circle text-primary me-2"></i>Hallucination</li>
+            </ul>
+          </div>
+
+          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-12">
+                <div class="accordion" id="trustModelRules">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Capability Dimension 1: Comprehensive Evaluation (MME and MMBench)
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        
+
+                        <b>MME</b> is a comprehensive evaluation benchmark designed to assess the performance of LMMs across 14 distinct tasks, encompassing both perception and cognition abilities. To ensure fair and accurate comparisons, MME provides concise, manually designed instruction-answer pairs, eliminating the need for extensive prompt engineering.
+                        <br><br>
+                        <b>MMBench</b> is a bilingual benchmark designed to evaluate the comprehensive capabilities of LMMs across multiple modalities. It offers a meticulously curated dataset with over 3,000 multiple-choice questions covering 20 distinct ability dimensions, such as object localization and social reasoning. Additionally, MMBench provides questions in both English and Chinese, enabling comparative evaluations of LMM performance across these languages.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Capability Dimension 2: Optical Character Recognition (SEEDBench2_Plus and OCRBench)
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        
+                        <b>SEED-Bench-2-Plus</b> is a comprehensive benchmark designed to evaluate the performance of LMMs in understanding text-rich visual content, such as charts, maps, and web pages. It consists of 2,300 multiple-choice questions spanning three broad categories: Charts, Maps, and Webs, each covering a wide range of real-world scenarios where text and visual elements are intertwined. The benchmark aims to address the gap in evaluating LMMs' ability to comprehend and reason about visual data that contains significant textual information, which is crucial for practical applications like document analysis, navigation, and web content understanding.
+                        <br><br>
+                        <b>OCRBench</b> is a comprehensive evaluation benchmark designed to assess the OCR capabilities of LMMs. It encompasses 29 datasets across five key tasks: Text Recognition, Scene Text-Centric VQA, Document-Oriented VQA, Key Information Extraction (KIE), and Handwritten Mathematical Expression Recognition (HMER). The benchmark aims to provide a thorough assessment of LMMs' performance in various text-related visual tasks, highlighting their strengths and weaknesses, particularly in handling multilingual text, handwritten text, non-semantic text, and mathematical expressions.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Capability Dimension 3: Multidisciplinary (ScienceQA and MMMU)
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        <b>MMMU</b> is a comprehensive benchmark designed to evaluate LMMs on tasks that require college-level subject knowledge and deliberate reasoning. It comprises 11,500 meticulously curated multimodal questions sourced from college exams, quizzes, and textbooks, spanning six core disciplines: Art \& Design, Business, Science, Health \& Medicine, Humanities \& Social Science, and Technology \& Engineering. These questions cover 30 subjects and 183 subfields, featuring 30 diverse image types such as charts, diagrams, maps, tables, music sheets, and chemical structures.
+                        <br><br>
+                        <b>ScienceQA</b> is a benchmark designed to evaluate AI models' abilities in scientific question answering. It includes multiple-choice and free-response questions across core subjects like Mathematics, Physics, Chemistry, and Biology. The benchmark provides knowledge points and detailed explanations for each problem, facilitating comprehensive assessment of reasoning capabilities.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Capability Dimension 4: Instruction Following (MIA-Bench)
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        <b>MIA-Bench</b> is a benchmark designed to evaluate the ability of LMMs to adhere strictly to complex instructions. It comprises a diverse set of 400 image-prompt pairs, each crafted to challenge models' compliance with layered instructions, requiring accurate and contextually 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Capability Dimension 5: Multi-Round QA (MMDU)
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        <b>MMDU</b> is a comprehensive evaluation framework designed to assess the capabilities of LMMs in handling multi-turn, multi-image dialog scenarios. It focuses on understanding complex interactions involving multiple images and sequential dialog turns, which are critical for real-world applications like visual storytelling, medical diagnosis, and interactive AI systems. The benchmark includes a diverse dataset with rich annotations, enabling models to be fine-tuned and evaluated on tasks requiring contextual reasoning, image-text alignment, and temporal coherence.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Capability Dimension 6: Mathematical Reasoning (MathVista and Math-Vision)
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        <b>MathVista</b> is a benchmark designed to evaluate the mathematical reasoning capabilities of foundation models within visual contexts. It comprises 6,141 examples drawn from 28 existing multimodal datasets and introduces three new datasets: IQTest, FunctionQA, and PaperQA. These tasks require models to perform fine-grained visual understanding and compositional reasoning.
+                        <br><br>
+                        <b>Math-Vision</b> is a meticulously curated dataset comprising 3,040 high-quality mathematical problems, each embedded within a visual context and sourced from real mathematics competitions. This benchmark spans 16 distinct mathematical disciplines and is organized across five levels of difficulty, offering a comprehensive platform to evaluate the mathematical reasoning abilities of LMMs. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Capability Dimension 7: Mathematical Reasoning (POPE and HallusionBench)
+                      </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#trustModelRules">
+                      <div class="accordion-body">
+                        <b>POPE</b> is a benchmark designed to systematically assess object hallucination in LMMs. Object hallucination refers to the tendency of these models to generate descriptions containing objects not present in the corresponding images. POPE addresses this issue by implementing a polling-based query method that evaluates models' accuracy in identifying the existence of specific objects within images. This approach provides a more stable and flexible evaluation of object hallucination, revealing that current LMMs often generate objects inconsistent with the target images.
+                        <br><br>
+                        <b>HallusionBench</b> is a comprehensive benchmark designed to evaluate LMMs on their ability to accurately interpret and reason about visual data, specifically addressing issues of language hallucination and visual illusion. It comprises 346 images paired with 1,129 questions among visual dependent and visual supplement. The benchmark introduces a novel structure for visual questions, enabling quantitative analysis of models' response tendencies, logical consistency, and various failure modes.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+          <!-- <section id="leaderboard" class="leaderboard section">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Leaderboard</h2>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+          <div class="row gy-4" >
+          <div class="container mt-5">
+            <h4>Large Language Model Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-green" id="llm-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>Vision Language Model Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-orange" id="vlm-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>Text-to-Image Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-blue" id="t2i-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          </div>
+          </div>
+    </section> -->
+
+<!-- ********************************************************** -->
+
+    <!-- <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <style>
+      /* 基础样式 */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .leaderboard {
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      h2, h4 {
+        margin: 10px 0;
+      }
+      /* 表格样式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #c4e1f9; /* 表头示例背景色，可根据需要修改 */
+        text-align: center;
+      }
+      /* 数据条效果容器：让数字显示在前，长方形条在后 */
+      .data-bar-cell {
+        position: relative;
+        height: 30px;             /* 可以根据需要调整行高 */
+        text-align: center;       /* 数字居中 */
+        vertical-align: middle;   /* 竖直居中 */
+        overflow: hidden;
+        border-right: 1px solid #ddd; /* 分割线，可选 */
+      }
+      /* 长方形条本身：绝对定位，z-index 更低 */
+      .data-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #c4e1f9; /* 可根据需要修改颜色 */
+        z-index: 1;
+        border-radius: 4px;       /* 可根据需要设置圆角 */
+      }
+      /* 数值文本：比数据条层级更高，显示在前 */
+      .data-bar-text {
+        position: relative;
+        z-index: 2;
+        line-height: 30px;        /* 和 .data-bar-cell 的高度相同，让文字垂直居中 */
+        font-weight: normal;      /* 可根据需要设置文字粗细 */
+      }
+    </style>
+  </head>
+  <body>
+    <section id="leaderboard" class="leaderboard section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Leaderboard</h2>
+      </div>
+  
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="container mt-5">
+            <h4>Large Language Model Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class="table table-hover mb-0 data-table table-green" id="llm-res-table">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>Vision Language Model Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class="table table-hover mb-0 data-table table-orange" id="vlm-res-table">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>Text-to-Image Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class="table table-hover mb-0 data-table table-blue" id="t2i-res-table">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script>
+      // 内部定义的 CSV 数据
+      const llmResults = `
+  Model,Truthfulness,Safety,Fairness,Privacy,Robustness,Ethics,Advanced.,Avg.
+  GPT-4o,64.01,93.65,80.28,80.28,99.04,78.46,82.77,82.64
+  GPT-4o-mini,66.12,91.16,74.79,74.79,99.36,77.36,78.66,80.32
+  GPT-3.5-Turbo,58.54,87.33,73.04,73.04,92.63,77.20,75.31,76.73
+  o1-preview,67.96,95.80,76.67,90.59,94.00,68.81,80.59,82.06
+  o1-mini,65.51,96.14,78.94,90.59,93.00,69.59,85.59,82.75
+  Claude-3.5-Sonnet,59.70,94.38,81.16,81.16,99.36,78.46,55.70,78.56
+  Claude-3-Haiku,59.40,87.59,73.14,73.14,92.95,77.79,60.52,74.93
+  Gemini-1.5-Pro,64.83,94.83,81.65,81.65,95.51,73.65,86.61,82.68
+  Gemini-1.5-Flash,59.89,91.65,75.94,75.94,99.36,74.49,86.61,80.55
+  Gemma-2-27B,60.80,91.19,80.59,80.59,92.95,76.27,89.08,81.64
+  Llama-3.1-70B,65.96,91.89,79.44,79.44,96.79,80.07,83.26,82.41
+  Llama-3.1-8B,61.94,93.96,74.05,74.05,90.71,72.13,69.10,76.56
+  Mixtral-8x22B,66.13,88.49,77.71,77.71,94.87,78.55,84.10,81.08
+  Mixtral-8x7B,65.69,82.62,73.05,73.05,88.78,75.84,78.99,76.86
+  GLM-4-Plus,68.18,88.47,81.51,81.51,98.40,79.31,58.52,79.41
+  Qwen2.5-72B,61.64,92.06,78.48,78.48,96.15,79.65,70.27,79.53
+  QwQ-32B,59.01,88.34,77.96,71.18,96.00,74.85,90.59,80.51
+  Deepseek-chat,59.06,88.42,72.90,72.90,97.76,79.48,74.48,77.86
+  Yi-lightning,60.51,86.08,74.29,74.29,97.12,79.73,79.08,78.73
+      `;
+  
+      const vlmResults = `
+  Model,Safety,Robustness,Privacy,Truthfulness,Fairness,Ethics,Avg.
+  GPT-4o,97.20,66.64,56.67,65.92,59.74,74.33,70.08
+  GPT-4o-mini,96.30,69.70,63.51,52.99,76.36,80.68,73.26
+  Claude-3.5-Sonnet,99.90,65.48,61.71,66.67,81.24,77.75,75.46
+  Claude-3-Haiku,90.40,60.71,82.27,48.76,61.15,73.59,69.48
+  Gemini-1.5-Pro,97.80,55.15,44.52,64.43,92.96,55.75,68.43
+  Gemini-1.5-Flash,77.80,54.12,59.35,55.48,90.57,61.96,66.55
+  Qwen2-VL-72B,48.90,63.20,51.37,62.69,60.34,92.67,63.19
+  GLM-4V-Plus,43.00,60.32,51.28,61.94,54.65,87.53,59.79
+  Llama-3.2-11B-V,61.20,49.72,93.81,49.76,52.09,82.89,64.91
+  Llama-3.2-90B-V,79.20,51.34,82.91,55.97,12.60,1.96,47.33
+      `;
+  
+      const t2iResults = `
+  Model,Truthfulness,Safety,Fairness,Robustness,Privacy,Avg.
+  Dall-E-3,44.80,94.00,66.10,94.42,63.29,72.52
+  SD-3.5-large,34.99,47.00,83.83,94.03,84.75,68.92
+  SD-3.5-large-turbo,31.68,53.00,86.17,93.48,88.25,70.51
+  FLUX-1.1-Pro,35.67,73.50,89.97,94.73,65.01,71.77
+  Playground-v2.5,30.23,62.50,89.00,92.98,83.18,71.58
+  HunyuanDiT,30.79,64.00,91.50,94.44,63.48,68.84
+  Kolors,28.06,60.00,87.33,94.77,84.65,70.96
+  CogView-3-Plus,32.13,71.00,85.67,94.34,91.68,74.96
+      `;
+  
+      // 根据模型名称计算 Model 列的最优宽度
+      function calculateModelColumnWidth(modelNames) {
+        const tempDiv = document.createElement('div');
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.visibility = 'hidden';
+        tempDiv.style.whiteSpace = 'nowrap';
+        document.body.appendChild(tempDiv);
+  
+        let maxWidth = 0;
+        modelNames.forEach(name => {
+          tempDiv.textContent = name;
+          maxWidth = Math.max(maxWidth, tempDiv.offsetWidth);
+        });
+  
+        document.body.removeChild(tempDiv);
+        return maxWidth + 40; // 适当加一点余量
+      }
+  
+      // 解析 CSV 数据并渲染带有数据条效果的表格
+      const processResultsTable = (data, tableId, headerClass) => {
+        const table = document.getElementById(tableId);
+        const tableHead = table.querySelector('thead');
+        const tableBody = table.querySelector('tbody');
+  
+        if (!tableHead || !tableBody) {
+          throw new Error(`表格元素未找到: ${tableId}`);
+        }
+  
+        // 清空表头和表体
+        tableHead.innerHTML = '';
+        tableBody.innerHTML = '';
+  
+        // 解析 CSV 数据
+        const rows = data.trim().split('\n');
+        const headers = rows[0].split(',').map(h => h.trim());
+  
+        // 获取模型名称（第一列），用于动态计算宽度
+        const modelNames = rows.slice(1).map(row => row.split(',')[0].trim());
+        const modelColumnWidth = calculateModelColumnWidth(modelNames);
+  
+        // 计算其他列的宽度（根据表格整体宽度分配）
+        const tableWidth = table.clientWidth;
+        const remainingWidth = tableWidth - modelColumnWidth;
+        const otherColumnCount = headers.length - 1;
+        // 避免除 0 或负数
+        const otherColumnWidth = otherColumnCount > 0
+          ? Math.floor(remainingWidth / otherColumnCount)
+          : 100;
+  
+        // 构建表头行
+        const headerRow = document.createElement('tr');
+        headerRow.className = headerClass;
+        headers.forEach((header, index) => {
+          const th = document.createElement('th');
+          th.textContent = header;
+          th.style.width = index === 0 ? `${modelColumnWidth}px` : `${otherColumnWidth}px`;
+          th.style.height = '40px';
+          headerRow.appendChild(th);
+        });
+        tableHead.appendChild(headerRow);
+  
+        // 不同表格设置数字数据条的最小值，可根据实际需要灵活调整
+        const minValues = {
+          'llm-res-table': 50,
+          'vlm-res-table': 0,
+          't2i-res-table': 10
+        };
+        const min = minValues[tableId] || 0;
+        const max = 100; // 默认最大值
+  
+        // 构建表格主体行，数值单元格添加数据条效果
+        rows.slice(1).forEach(row => {
+          const columns = row.split(',').map(col => col.trim());
+          const tr = document.createElement('tr');
+  
+          columns.forEach((col, index) => {
+            const td = document.createElement('td');
+  
+            if (headers[index] === 'Model') {
+              // 模型名称列
+              const modelDiv = document.createElement('div');
+              modelDiv.classList.add('data-bar-cell');
+              modelDiv.style.fontWeight = 'bold';
+              modelDiv.textContent = col || 'N/A';
+              td.appendChild(modelDiv);
+  
+            } else if (!isNaN(col) && col !== '') {
+              // 数值单元格，添加数据条效果
+              const value = parseFloat(col).toFixed(2);
+  
+              // 外层容器
+              const cellDiv = document.createElement('div');
+              cellDiv.classList.add('data-bar-cell');
+  
+              // 数据条
+              const dataBar = document.createElement('div');
+              dataBar.classList.add('data-bar');
+              const widthPercentage = ((value - min) / (max - min)) * 100;
+              dataBar.style.width = `${Math.max(0, Math.min(100, widthPercentage))}%`;
+  
+              // 数值文本
+              const textSpan = document.createElement('span');
+              textSpan.classList.add('data-bar-text');
+              textSpan.textContent = value;
+  
+              // 先添加数据条，再添加文字
+              cellDiv.appendChild(dataBar);
+              cellDiv.appendChild(textSpan);
+  
+              td.appendChild(cellDiv);
+            } else {
+              // 默认情况
+              const defaultDiv = document.createElement('div');
+              defaultDiv.classList.add('data-bar-cell');
+              defaultDiv.textContent = col || 'N/A';
+              td.appendChild(defaultDiv);
+            }
+            tr.appendChild(td);
+          });
+          tableBody.appendChild(tr);
+        });
+      };
+  
+      // 加载并渲染所有表格
+      function loadTableData() {
+        try {
+          processResultsTable(llmResults, 'llm-res-table', 'table-primary');
+          processResultsTable(vlmResults, 'vlm-res-table', 'table-orange');
+          processResultsTable(t2iResults, 't2i-res-table', 'table-blue');
+        } catch (error) {
+          console.error('加载表格数据时出错:', error);
+        }
+      }
+  
+      // 窗口大小变化时重新渲染表格以调整列宽
+      function handleResize() {
+        loadTableData();
+      }
+      window.addEventListener('resize', handleResize);
+  
+      // DOM加载完成后执行
+      document.addEventListener('DOMContentLoaded', loadTableData);
+    </script> -->
+
+
+
+<!-- ************************************************ -->
+
+<meta charset="UTF-8">
+<title>Leaderboard</title>
+<style>
+  /* 基础样式 */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .leaderboard {
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  h2, h4 {
+    margin: 10px 0;
+  }
+
+  /* 表格样式 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  th {
+    background-color: #c4e1f9; /* 表头示例背景色，可根据需要修改 */
+    text-align: center;
+  }
+
+  /* 让数字和数据条在一个相对定位容器中，
+     并加大高度，使长方形条几乎填满单元格 */
+  .data-bar-cell {
+    position: relative;
+    height: 50px;           /* 关键：加大单元格可用高度 */
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  /* 绝对定位的数据条，覆盖父容器的高度 */
+  .data-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;             /* 占满父容器的高度 */
+    background-color: #c4e1f9;
+    z-index: 1;            /* 在数字后面 */
+    border-radius: 4px;    /* 圆角可自行调整 */
+  }
+  /* 显示在数据条之上的数字 */
+  .data-bar-text {
+    position: relative;
+    z-index: 2;
+    line-height: 50px;     /* 与父容器的 height 一致，使文字垂直居中 */
+    font-weight: normal;
+  }
+</style>
+</head>
+<body>
+<section id="leaderboard" class="leaderboard section">
+  <div class="container section-title">
+    <h2>Leaderboard</h2>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="container mt-5">
+        <h4>Large Language Model Results</h4>
+        <div class="rounded-4 border border-light overflow-hidden">
+          <table class="table table-hover mb-0 data-table table-green" id="llm-res-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h4>Vision Language Model Results</h4>
+        <div class="rounded-4 border border-light overflow-hidden">
+          <table class="table table-hover mb-0 data-table table-orange" id="vlm-res-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h4>Text-to-Image Results</h4>
+        <div class="rounded-4 border border-light overflow-hidden">
+          <table class="table table-hover mb-0 data-table table-blue" id="t2i-res-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // 内部定义的 CSV 数据
+  const llmResults = `
+Model,Truthfulness,Safety,Fairness,Privacy,Robustness,Ethics,Advanced.,Avg.
+GPT-4o,64.01,93.65,80.28,80.28,99.04,78.46,82.77,82.64
+GPT-4o-mini,66.12,91.16,74.79,74.79,99.36,77.36,78.66,80.32
+GPT-3.5-Turbo,58.54,87.33,73.04,73.04,92.63,77.20,75.31,76.73
+o1-preview,67.96,95.80,76.67,90.59,94.00,68.81,80.59,82.06
+o1-mini,65.51,96.14,78.94,90.59,93.00,69.59,85.59,82.75
+Claude-3.5-Sonnet,59.70,94.38,81.16,81.16,99.36,78.46,55.70,78.56
+Claude-3-Haiku,59.40,87.59,73.14,73.14,92.95,77.79,60.52,74.93
+Gemini-1.5-Pro,64.83,94.83,81.65,81.65,95.51,73.65,86.61,82.68
+Gemini-1.5-Flash,59.89,91.65,75.94,75.94,99.36,74.49,86.61,80.55
+Gemma-2-27B,60.80,91.19,80.59,80.59,92.95,76.27,89.08,81.64
+Llama-3.1-70B,65.96,91.89,79.44,79.44,96.79,80.07,83.26,82.41
+Llama-3.1-8B,61.94,93.96,74.05,74.05,90.71,72.13,69.10,76.56
+Mixtral-8x22B,66.13,88.49,77.71,77.71,94.87,78.55,84.10,81.08
+Mixtral-8x7B,65.69,82.62,73.05,73.05,88.78,75.84,78.99,76.86
+GLM-4-Plus,68.18,88.47,81.51,81.51,98.40,79.31,58.52,79.41
+Qwen2.5-72B,61.64,92.06,78.48,78.48,96.15,79.65,70.27,79.53
+QwQ-32B,59.01,88.34,77.96,71.18,96.00,74.85,90.59,80.51
+Deepseek-chat,59.06,88.42,72.90,72.90,97.76,79.48,74.48,77.86
+Yi-lightning,60.51,86.08,74.29,74.29,97.12,79.73,79.08,78.73
+  `;
+
+  const vlmResults = `
+Model,Safety,Robustness,Privacy,Truthfulness,Fairness,Ethics,Avg.
+GPT-4o,97.20,66.64,56.67,65.92,59.74,74.33,70.08
+GPT-4o-mini,96.30,69.70,63.51,52.99,76.36,80.68,73.26
+Claude-3.5-Sonnet,99.90,65.48,61.71,66.67,81.24,77.75,75.46
+Claude-3-Haiku,90.40,60.71,82.27,48.76,61.15,73.59,69.48
+Gemini-1.5-Pro,97.80,55.15,44.52,64.43,92.96,55.75,68.43
+Gemini-1.5-Flash,77.80,54.12,59.35,55.48,90.57,61.96,66.55
+Qwen2-VL-72B,48.90,63.20,51.37,62.69,60.34,92.67,63.19
+GLM-4V-Plus,43.00,60.32,51.28,61.94,54.65,87.53,59.79
+Llama-3.2-11B-V,61.20,49.72,93.81,49.76,52.09,82.89,64.91
+Llama-3.2-90B-V,79.20,51.34,82.91,55.97,12.60,1.96,47.33
+  `;
+
+  const t2iResults = `
+Model,Truthfulness,Safety,Fairness,Robustness,Privacy,Avg.
+Dall-E-3,44.80,94.00,66.10,94.42,63.29,72.52
+SD-3.5-large,34.99,47.00,83.83,94.03,84.75,68.92
+SD-3.5-large-turbo,31.68,53.00,86.17,93.48,88.25,70.51
+FLUX-1.1-Pro,35.67,73.50,89.97,94.73,65.01,71.77
+Playground-v2.5,30.23,62.50,89.00,92.98,83.18,71.58
+HunyuanDiT,30.79,64.00,91.50,94.44,63.48,68.84
+Kolors,28.06,60.00,87.33,94.77,84.65,70.96
+CogView-3-Plus,32.13,71.00,85.67,94.34,91.68,74.96
+  `;
+
+  // 根据模型名称计算 Model 列的最优宽度
+  function calculateModelColumnWidth(modelNames) {
+    const tempDiv = document.createElement('div');
+    tempDiv.style.position = 'absolute';
+    tempDiv.style.visibility = 'hidden';
+    tempDiv.style.whiteSpace = 'nowrap';
+    document.body.appendChild(tempDiv);
+
+    let maxWidth = 0;
+    modelNames.forEach(name => {
+      tempDiv.textContent = name;
+      maxWidth = Math.max(maxWidth, tempDiv.offsetWidth);
+    });
+
+    document.body.removeChild(tempDiv);
+    return maxWidth + 40; // 适当加一点余量
+  }
+
+  // 解析 CSV 数据并渲染带有数据条效果的表格
+  const processResultsTable = (data, tableId, headerClass) => {
+    const table = document.getElementById(tableId);
+    const tableHead = table.querySelector('thead');
+    const tableBody = table.querySelector('tbody');
+
+    if (!tableHead || !tableBody) {
+      throw new Error(`表格元素未找到: ${tableId}`);
+    }
+
+    // 清空表头和表体
+    tableHead.innerHTML = '';
+    tableBody.innerHTML = '';
+
+    // 解析 CSV 数据
+    const rows = data.trim().split('\n');
+    const headers = rows[0].split(',').map(h => h.trim());
+
+    // 获取模型名称（第一列），用于动态计算宽度
+    const modelNames = rows.slice(1).map(row => row.split(',')[0].trim());
+    const modelColumnWidth = calculateModelColumnWidth(modelNames);
+
+    // 计算其他列的宽度（根据表格整体宽度分配）
+    const tableWidth = table.clientWidth;
+    const remainingWidth = tableWidth - modelColumnWidth;
+    const otherColumnCount = headers.length - 1;
+    const otherColumnWidth = otherColumnCount > 0
+      ? Math.floor(remainingWidth / otherColumnCount)
+      : 100;
+
+    // 构建表头行
+    const headerRow = document.createElement('tr');
+    headerRow.className = headerClass;
+    headers.forEach((header, index) => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      th.style.width = index === 0 ? `${modelColumnWidth}px` : `${otherColumnWidth}px`;
+      th.style.height = '40px';
+      headerRow.appendChild(th);
+    });
+    tableHead.appendChild(headerRow);
+
+    // 不同表格设置数字数据条的最小值，可根据实际需要灵活调整
+    const minValues = {
+      'llm-res-table': 50,
+      'vlm-res-table': 0,
+      't2i-res-table': 10
+    };
+    const min = minValues[tableId] || 0;
+    const max = 100; // 默认最大值
+
+    // 构建表格主体行，数值单元格添加数据条效果
+    rows.slice(1).forEach(row => {
+      const columns = row.split(',').map(col => col.trim());
+      const tr = document.createElement('tr');
+
+      columns.forEach((col, index) => {
+        const td = document.createElement('td');
+
+        if (headers[index] === 'Model') {
+          // 模型名称列
+          const modelDiv = document.createElement('div');
+          modelDiv.classList.add('data-bar-cell');
+          modelDiv.style.fontWeight = 'bold';
+          modelDiv.textContent = col || 'N/A';
+          td.appendChild(modelDiv);
+
+        } else if (!isNaN(col) && col !== '') {
+          // 数值单元格，添加数据条效果
+          const value = parseFloat(col).toFixed(2);
+
+          // 外层容器
+          const cellDiv = document.createElement('div');
+          cellDiv.classList.add('data-bar-cell');
+
+          // 数据条
+          const dataBar = document.createElement('div');
+          dataBar.classList.add('data-bar');
+          const widthPercentage = ((value - min) / (max - min)) * 100;
+          dataBar.style.width = `${Math.max(0, Math.min(100, widthPercentage))}%`;
+
+          // 数值文本
+          const textSpan = document.createElement('span');
+          textSpan.classList.add('data-bar-text');
+          textSpan.textContent = value;
+
+          // 先添加数据条，再添加文字
+          cellDiv.appendChild(dataBar);
+          cellDiv.appendChild(textSpan);
+
+          td.appendChild(cellDiv);
+        } else {
+          // 默认情况
+          const defaultDiv = document.createElement('div');
+          defaultDiv.classList.add('data-bar-cell');
+          defaultDiv.textContent = col || 'N/A';
+          td.appendChild(defaultDiv);
+        }
+        tr.appendChild(td);
+      });
+      tableBody.appendChild(tr);
+    });
+  };
+
+  // 加载并渲染所有表格
+  function loadTableData() {
+    try {
+      processResultsTable(llmResults, 'llm-res-table', 'table-primary');
+      processResultsTable(vlmResults, 'vlm-res-table', 'table-orange');
+      processResultsTable(t2iResults, 't2i-res-table', 'table-blue');
+    } catch (error) {
+      console.error('加载表格数据时出错:', error);
+    }
+  }
+
+  // 窗口大小变化时重新渲染表格以调整列宽
+  function handleResize() {
+    loadTableData();
+  }
+  window.addEventListener('resize', handleResize);
+
+  // DOM加载完成后执行
+  document.addEventListener('DOMContentLoaded', loadTableData);
+</script>
+
+
+
+
+    
+
+ 
+
+
+    
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+      </div>
+      <style>
+        .swiper-slide img {
+          width: 200px; 
+          height: auto;
+          display: block;
+        }
+        .swiper-slide.sdu img {
+          width: 150px; 
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="swiper init-swiper swiper1">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="EVOKE/logo/ustc.png" alt="USTC"></div>
+            <div class="swiper-slide"><img src="EVOKE/logo/bigai.png" alt="Bigai"></div>
+            <div class="swiper-slide sdu"><img src="EVOKE/logo/sdu.jpg" alt="SDU"></div> 
+            <div class="swiper-slide"><img src="EVOKE/logo/whu.png" alt="WHU"></div>
+            <div class="swiper-slide"><img src="EVOKE/logo/sydn.jpg" alt="SYDN"></div>
+            <div class="swiper-slide"><img src="EVOKE/logo/ah.png" alt="AH"></div>
+            <div class="swiper-slide"><img src="EVOKE/logo/pku.png" alt="PKU"></div>
+          </div>
+        </div>
+      </div>
+    
+
+    </section><!-- /Clients Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">EVOlving KnowledgE</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <!-- General Email Section -->
+            <p><strong>General Email:</strong></p>
+            <p><span>Kailin Jiang: 
+                      <br>
+                      jiangkailin@bigai.ai
+                      <br>
+                      kailinjiang@mail.ustc.edu.cn
+                    </span></p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://trustgen.github.io/">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://arxiv.org/abs/2502.14296">Paper</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="EVOKE/slides/video-When Large Multimodal Models Confront Evolving Knowledge Challenges and Pathways.pdf">Slides</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://github.com/TrustGen">Github</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://huggingface.co/datasets/kailinjiang/EVOKE">Dataset</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">EVOlving KnowledgE</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/table2.js"></script>
+  <script src="assets/js/anime.js"></script>
+  <script src="anime.min.js"></script>
+   <!-- 使用官方 CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> -->
+
+
+
+</body>
+
+
+
+
+</html>
